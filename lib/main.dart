@@ -1,8 +1,16 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:fitness_app/modules/onboarding/get_started_screen.dart';
+import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,18 +18,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Poppins',
-        // textTheme: const TextTheme(
-        //   headline1: TextStyle(fontSize: 55.0, fontWeight: FontWeight.bold),
-        //   headline6: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
-        //   bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        // ),
-      ),
-      home: const GetStartedScreen(),
+    // DeviceDimensions.setDeviceSize(context);
+    return ScreenUtilInit(
+      designSize: DeviceDimensions.designSize,
+      builder: (_) {
+        DeviceDimensions.setDeviceSize(context);
+        return MaterialApp(
+          builder: DevicePreview.appBuilder,
+          locale: DevicePreview.locale(context),
+          debugShowCheckedModeBanner: false,
+          // Use this line to prevent extra rebuilds
+          useInheritedMediaQuery: true,
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            fontFamily: 'Poppins',
+          ),
+          home: const GetStartedScreen(),
+        );
+      },
     );
   }
 }

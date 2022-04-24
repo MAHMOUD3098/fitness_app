@@ -1,9 +1,8 @@
 import 'package:fitness_app/shared/components/components.dart';
+import 'package:fitness_app/shared/components/paths.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-
-import '../../shared/utilities/paths.dart';
 
 class BoardingModel {
   final String title;
@@ -33,7 +32,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     ),
     BoardingModel(
       'Get Burn',
-      'Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever',
+      'Let’s keep burning, to achieve yours goals, it hurts only temporarily, if you give up now you will be in pain forever',
       Paths.onBoardingImage2,
     ),
     BoardingModel(

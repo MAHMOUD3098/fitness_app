@@ -2,7 +2,7 @@ import 'package:fitness_app/shared/components/constants.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:fitness_app/shared/styles/themes.dart';
 import 'package:flutter/material.dart';
-import 'onboarding_screend.dart';
+import 'onboarding_screen.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({Key? key}) : super(key: key);
