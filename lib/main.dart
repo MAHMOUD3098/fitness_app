@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // DeviceDimensions.setDeviceSize(context);
     return ScreenUtilInit(
       designSize: DeviceDimensions.designSize,
       builder: (_) {
