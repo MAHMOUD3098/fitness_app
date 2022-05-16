@@ -1,4 +1,6 @@
+import 'package:fitness_app/modules/signup/signup_screen.dart';
 import 'package:fitness_app/shared/components/components.dart';
+import 'package:fitness_app/shared/components/constants.dart';
 import 'package:fitness_app/shared/components/paths.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +117,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     );
                   }
                 } else {
-                  // navigate to sign up and login
+                  navigateTo(context, SignUpScreen());
                 }
               },
               child: Image.asset(

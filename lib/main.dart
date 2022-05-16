@@ -4,10 +4,11 @@ import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
+void main() async {
+  await ScreenUtil.ensureScreenSize();
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => const MyApp(),
     ),
   );
@@ -20,19 +21,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: DeviceDimensions.designSize,
-      builder: (_) {
-        DeviceDimensions.setDeviceSize(context);
+      builder: (context) {
+        // DeviceDimensions.setDeviceSize(context);
         return MaterialApp(
           builder: DevicePreview.appBuilder,
           locale: DevicePreview.locale(context),
           debugShowCheckedModeBanner: false,
-          // Use this line to prevent extra rebuilds
+          // Use the line below to prevent extra rebuilds
           useInheritedMediaQuery: true,
           theme: ThemeData(
             primarySwatch: Colors.blue,
             fontFamily: 'Poppins',
           ),
           home: const GetStartedScreen(),
+          // home: Container(width: 4.w),
         );
       },
     );

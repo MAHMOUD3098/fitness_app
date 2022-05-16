@@ -20,4 +20,18 @@ class DeviceDimensions {
   static setFontSize(num fontSize) {
     return ScreenUtil().setSp(fontSize);
   }
+
+  static setRadius(num radius) {
+    return ScreenUtil().radius(radius);
+  }
+
+  static getRequiredHeight(double height) {
+    double percent = ((height * 100) / designSize.height).roundToDouble();
+    return ((percent / 100) * designSize.height).round();
+  }
+
+  static getRequiredWidth(double width) {
+    double percent = ((width * 100) / designSize.width).roundToDouble();
+    return ((percent / 100) * designSize.width).round();
+  }
 }
