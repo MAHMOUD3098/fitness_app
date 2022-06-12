@@ -16,13 +16,13 @@ Widget onBoardingScreenItem(
       Image.asset(
         image,
         fit: BoxFit.fill,
-        height: DeviceDimensions.setHeight(406),
+        height: 443,
       ),
-      SizedBox(
-        height: DeviceDimensions.setHeight(64),
+      const SizedBox(
+        height: 64,
       ),
       Padding(
-        padding: EdgeInsets.symmetric(horizontal: DeviceDimensions.setWidth(30)),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -30,8 +30,8 @@ Widget onBoardingScreenItem(
               title,
               style: h2TextStyle,
             ),
-            SizedBox(
-              height: DeviceDimensions.setHeight(15),
+            const SizedBox(
+              height: 15,
             ),
             Text(
               description,
@@ -58,8 +58,8 @@ Widget customTextFormField(
     bool isClickable = true,
     bool isPassword = false}) {
   return Padding(
-    padding: EdgeInsets.symmetric(
-      vertical: DeviceDimensions.setHeight(15),
+    padding: const EdgeInsets.symmetric(
+      vertical: 15,
     ),
     child: TextFormField(
       controller: controller,
@@ -72,9 +72,7 @@ Widget customTextFormField(
         hintStyle: hintTextStyle.copyWith(fontWeight: FontWeight.w400),
         border: OutlineInputBorder(
           borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(
-            DeviceDimensions.setRadius(14),
-          ),
+          borderRadius: BorderRadius.circular(14),
         ),
         fillColor: borderColor,
         filled: true,
@@ -97,13 +95,13 @@ Widget customTextButton(
         ? null
         : BoxDecoration(
             gradient: gradientColor,
-            borderRadius: BorderRadius.circular(DeviceDimensions.setRadius(99)),
+            borderRadius: BorderRadius.circular(99),
           ),
     child: TextButton(
       style: ButtonStyle(
         padding: MaterialStateProperty.all(
-          EdgeInsets.symmetric(
-            vertical: DeviceDimensions.setHeight(18),
+          const EdgeInsets.symmetric(
+            vertical: 18,
           ),
         ),
         backgroundColor: gradientColor == null ? MaterialStateProperty.all(backgroundColor ?? Colors.blue[400]) : null,
@@ -129,14 +127,12 @@ Widget customSocialMediaButton({@required String? icon, @required Function()? on
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
     child: Container(
-      width: DeviceDimensions.setWidth(50),
-      height: DeviceDimensions.setHeight(50),
+      width: 50,
+      height: 50,
       decoration: BoxDecoration(
         color: whiteColor,
         border: Border.all(color: gray_3),
-        borderRadius: BorderRadius.circular(
-          DeviceDimensions.setRadius(14),
-        ),
+        borderRadius: BorderRadius.circular(14),
       ),
       child: Image.asset(
         icon ?? '',

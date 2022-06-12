@@ -32,9 +32,9 @@ class SignUpScreen extends StatelessWidget {
             child: Scaffold(
               backgroundColor: whiteColor,
               body: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: DeviceDimensions.setHeight(20),
-                  horizontal: DeviceDimensions.setWidth(30),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 40,
+                  horizontal:30,
                 ),
                 child: Form(
                   key: signUpFormKey,
@@ -47,7 +47,7 @@ class SignUpScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: largeTextStyle.copyWith(color: blackColor, fontWeight: FontWeight.w400),
                         ),
-                        // SizedBox(height: DeviceDimensions.setHeight(5)),
+                        const SizedBox(height: 5),
                         Text(
                           'Create an Account',
                           textAlign: TextAlign.center,
@@ -118,7 +118,6 @@ class SignUpScreen extends StatelessWidget {
                           },
                         ),
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Transform.scale(
                               scale: 1.2,
@@ -130,9 +129,7 @@ class SignUpScreen extends StatelessWidget {
                                 splashRadius: 0.0, //to disable the splash effect
                                 side: BorderSide(color: gray_2),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    DeviceDimensions.setRadius(3),
-                                  ),
+                                  borderRadius: BorderRadius.circular(3),
                                 ),
                               ),
                             ),
@@ -166,19 +163,19 @@ class SignUpScreen extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: DeviceDimensions.setHeight(147),
+                          height: MediaQuery.of(context).size.height*0.085,
                         ),
                         customTextButton(
                           text: 'Register',
                           textStyle:
-                              mediumTextStyle.copyWith(color: whiteColor, fontSize: DeviceDimensions.setFontSize(16), fontWeight: FontWeight.bold),
+                              mediumTextStyle.copyWith(color: whiteColor, fontSize: 16, fontWeight: FontWeight.bold),
                           gradientColor: blueLinear,
                           onPressed: () {
                             navigateTo(context, const CompleteProfileScreen());
                           },
                         ),
-                        SizedBox(
-                          height: DeviceDimensions.setHeight(20),
+                        const SizedBox(
+                          height: 20,
                         ),
                         Row(
                           children: [
@@ -203,19 +200,19 @@ class SignUpScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: DeviceDimensions.setHeight(20),
+                        const SizedBox(
+                          height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             customSocialMediaButton(icon: Paths.googleIcon, onTap: () {}),
-                            SizedBox(width: DeviceDimensions.setWidth(30)),
+                            const SizedBox(width: 30),
                             customSocialMediaButton(icon: Paths.facebookIcon, onTap: () {}),
                           ],
                         ),
-                        SizedBox(
-                          height: DeviceDimensions.setHeight(20),
+                        const SizedBox(
+                          height: 30,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -224,7 +221,7 @@ class SignUpScreen extends StatelessWidget {
                               'Already have an account? ',
                               style: mediumTextStyle.copyWith(
                                 color: blackColor,
-                                fontSize: DeviceDimensions.setFontSize(14),
+                                fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -235,7 +232,7 @@ class SignUpScreen extends StatelessWidget {
                               child: Text(
                                 'Login',
                                 style: mediumTextStyle.copyWith(
-                                  fontSize: DeviceDimensions.setFontSize(14),
+                                  fontSize:14,
                                   fontWeight: FontWeight.w400,
                                   foreground: Paint()
                                     ..shader = purpleLinear.createShader(

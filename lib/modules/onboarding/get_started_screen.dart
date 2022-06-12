@@ -19,9 +19,9 @@ class GetStartedScreen extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: DeviceDimensions.setHeight(40),
-              horizontal: DeviceDimensions.setWidth(30),
+            padding:const EdgeInsets.symmetric(
+              vertical: 40,
+              horizontal: 30,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,18 +35,18 @@ class GetStartedScreen extends StatelessWidget {
                         children: [
                           TextSpan(
                             text: 'Fitnest',
-                            style: h2TextStyle.copyWith(fontSize: DeviceDimensions.setFontSize(36)),
+                            style: h2TextStyle.copyWith(fontSize: 36),
                           ),
                           TextSpan(
                             text: 'X',
-                            style: h2TextStyle.copyWith(fontSize: DeviceDimensions.setFontSize(50), color: Colors.white),
+                            style: h2TextStyle.copyWith(fontSize: 50, color: Colors.white),
                           ),
                         ],
                       ),
                     ),
                     Text(
                       'Everybody Can Train',
-                      style: mediumTextStyle.copyWith(fontSize: DeviceDimensions.setFontSize(18), fontWeight: FontWeight.w400),
+                      style: mediumTextStyle.copyWith(fontSize: 18),
                     ),
                   ],
                 ),
