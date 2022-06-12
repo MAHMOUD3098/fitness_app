@@ -1,6 +1,8 @@
+import 'package:fitness_app/modules/signup/complete_profile_screen.dart';
 import 'package:fitness_app/modules/signup/cubit/cubit.dart';
 import 'package:fitness_app/modules/signup/cubit/states.dart';
 import 'package:fitness_app/shared/components/components.dart';
+import 'package:fitness_app/shared/components/constants.dart';
 import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:fitness_app/shared/components/paths.dart';
 import 'package:fitness_app/shared/lang/english_texts.dart';
@@ -171,7 +173,9 @@ class SignUpScreen extends StatelessWidget {
                           textStyle:
                               mediumTextStyle.copyWith(color: whiteColor, fontSize: DeviceDimensions.setFontSize(16), fontWeight: FontWeight.bold),
                           gradientColor: blueLinear,
-                          onPressed: () {},
+                          onPressed: () {
+                            navigateTo(context, const CompleteProfileScreen());
+                          },
                         ),
                         SizedBox(
                           height: DeviceDimensions.setHeight(20),

@@ -8,7 +8,7 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (context) => const MyApp(),
     ),
   );
@@ -21,8 +21,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: DeviceDimensions.designSize,
-      builder: (context) {
-        // DeviceDimensions.setDeviceSize(context);
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
         return MaterialApp(
           builder: DevicePreview.appBuilder,
           locale: DevicePreview.locale(context),
@@ -33,10 +34,10 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             fontFamily: 'Poppins',
           ),
-          home: const GetStartedScreen(),
-          // home: Container(width: 4.w),
+          home: child,
         );
       },
+      child: const GetStartedScreen(),
     );
   }
 }

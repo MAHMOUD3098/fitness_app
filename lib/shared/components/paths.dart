@@ -4,6 +4,8 @@ class Paths {
   static String onBoardingImage3 = 'assets/images/onBoarding3.png';
   static String onBoardingImage4 = 'assets/images/onBoarding4.png';
 
+  static String completeProfileImage = 'assets/images/complete_profile.png';
+
   static String arrowRight = 'assets/images/arrow_right.png';
 
   static String profileIcon = 'assets/images/profile.png';

@@ -5,8 +5,7 @@ class DeviceDimensions {
   static const Size designSize = Size(375, 812);
 
   static setDeviceSize(BuildContext context) {
-    Size deviceSize = Size(MediaQuery.of(context).size.height, MediaQuery.of(context).size.width);
-    ScreenUtil.init(context, designSize: designSize, deviceSize: deviceSize);
+    ScreenUtil.init(context, designSize: designSize);
   }
 
   static setHeight(num height) {
