@@ -1,6 +1,5 @@
 import 'package:fitness_app/shared/components/components.dart';
 import 'package:fitness_app/shared/components/constants.dart';
-import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:fitness_app/shared/styles/styles.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +18,7 @@ class GetStartedScreen extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding:const EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               vertical: 40,
               horizontal: 30,
             ),

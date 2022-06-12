@@ -1,4 +1,3 @@
-import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:fitness_app/shared/styles/styles.dart';
 import 'package:flutter/material.dart';
@@ -49,24 +48,28 @@ Widget customTextFormField(
     @required TextInputType? type,
     // Function onSubmit,
     // Function onChange,
-    // Function onTap,
+    Function()? onTap,
     @required String? Function(String?)? validate,
     @required String? placeHolder,
     @required String? prefixIcon,
+    double? verticalPadding,
     Icon? suffixIcon,
     Function()? suffixIconPressed,
+    bool readOnly = false,
     bool isClickable = true,
     bool isPassword = false}) {
   return Padding(
-    padding: const EdgeInsets.symmetric(
-      vertical: 15,
+    padding: EdgeInsets.symmetric(
+      vertical: verticalPadding ?? 15,
     ),
     child: TextFormField(
       controller: controller,
+      readOnly: readOnly,
       keyboardType: type,
       obscureText: isPassword,
       enabled: isClickable,
       validator: validate,
+      onTap: onTap,
       decoration: InputDecoration(
         hintText: placeHolder,
         hintStyle: hintTextStyle.copyWith(fontWeight: FontWeight.w400),

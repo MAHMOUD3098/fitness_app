@@ -34,11 +34,12 @@ class SignUpScreen extends StatelessWidget {
               body: Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 40,
-                  horizontal:30,
+                  horizontal: 30,
                 ),
                 child: Form(
                   key: signUpFormKey,
                   child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
@@ -163,15 +164,14 @@ class SignUpScreen extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: MediaQuery.of(context).size.height*0.085,
+                          height: MediaQuery.of(context).size.height * 0.085,
                         ),
                         customTextButton(
                           text: 'Register',
-                          textStyle:
-                              mediumTextStyle.copyWith(color: whiteColor, fontSize: 16, fontWeight: FontWeight.bold),
+                          textStyle: mediumTextStyle.copyWith(color: whiteColor, fontSize: 16, fontWeight: FontWeight.bold),
                           gradientColor: blueLinear,
                           onPressed: () {
-                            navigateTo(context, const CompleteProfileScreen());
+                            navigateTo(context, CompleteProfileScreen());
                           },
                         ),
                         const SizedBox(
@@ -232,7 +232,7 @@ class SignUpScreen extends StatelessWidget {
                               child: Text(
                                 'Login',
                                 style: mediumTextStyle.copyWith(
-                                  fontSize:14,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.w400,
                                   foreground: Paint()
                                     ..shader = purpleLinear.createShader(

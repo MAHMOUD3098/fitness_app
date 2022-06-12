@@ -7,6 +7,7 @@ class Paths {
   static String completeProfileImage = 'assets/images/complete_profile.png';
 
   static String arrowRight = 'assets/images/arrow_right.png';
+  static String arrowDown = 'assets/images/arrow_down.png';
 
   static String profileIcon = 'assets/images/profile.png';
   static String emailIcon = 'assets/images/email.png';
@@ -15,4 +16,9 @@ class Paths {
 
   static String googleIcon = 'assets/images/google.png';
   static String facebookIcon = 'assets/images/facebook.png';
+
+  static String genderIcon = 'assets/images/gender.png';
+  static String calendarIcon = 'assets/images/calendar.png';
+  static String weightIcon = 'assets/images/weight.png';
+  static String heightIcon = 'assets/images/height.png';
 }

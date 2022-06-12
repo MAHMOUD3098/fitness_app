@@ -1,4 +1,3 @@
-import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 
