@@ -118,7 +118,7 @@ class LoginScreen extends StatelessWidget {
                           onPressed: () {
                             navigateAndFinish(
                               context,
-                              WelcomeScreen(),
+                              const WelcomeScreen(),
                             );
                           },
                         ),

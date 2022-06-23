@@ -19,7 +19,7 @@ class GoalItem {
 class GoalsScreen extends StatelessWidget {
   GoalsScreen({Key? key}) : super(key: key);
 
-  List<GoalItem> goals = [
+  final List<GoalItem> goals = [
     GoalItem(Paths.goal1Image, 'Improve Shape', 'I have a low amount of body fat and need / want to build more muscle'),
     GoalItem(Paths.goal2Image, 'Lean & Tone', 'I’m “skinny fat”. look thin but have no shape. I want to add learn muscle in the right way'),
     GoalItem(Paths.goal3Image, 'Lose a Fat', 'I have over 20 lbs to lose. I want to drop all this fat and gain muscle mass'),

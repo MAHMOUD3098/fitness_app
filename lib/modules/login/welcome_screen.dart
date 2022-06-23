@@ -3,8 +3,6 @@ import 'package:fitness_app/shared/components/paths.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:fitness_app/shared/styles/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
