@@ -3,7 +3,6 @@ import 'package:fitness_app/modules/signup/cubit/cubit.dart';
 import 'package:fitness_app/modules/signup/cubit/states.dart';
 import 'package:fitness_app/shared/components/components.dart';
 import 'package:fitness_app/shared/components/constants.dart';
-import 'package:fitness_app/shared/components/dimensions.dart';
 import 'package:fitness_app/shared/components/paths.dart';
 import 'package:fitness_app/shared/lang/english_texts.dart';
 import 'package:fitness_app/shared/styles/colors.dart';

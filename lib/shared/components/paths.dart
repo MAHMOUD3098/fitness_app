@@ -6,6 +6,10 @@ class Paths {
 
   static String completeProfileImage = 'assets/images/complete_profile.png';
 
+  static String goal1Image = 'assets/images/goal1.png';
+  static String goal2Image = 'assets/images/goal2.png';
+  static String goal3Image = 'assets/images/goal3.png';
+
   static String arrowRight = 'assets/images/arrow_right.png';
   static String arrowDown = 'assets/images/arrow_down.png';
 

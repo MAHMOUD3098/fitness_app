@@ -1,4 +1,6 @@
+import 'package:fitness_app/modules/signup/goal_screen.dart';
 import 'package:fitness_app/shared/components/components.dart';
+import 'package:fitness_app/shared/components/constants.dart';
 import 'package:fitness_app/shared/components/paths.dart';
 import 'package:fitness_app/shared/styles/colors.dart';
 import 'package:fitness_app/shared/styles/styles.dart';
@@ -210,7 +212,9 @@ class CompleteProfileScreen extends StatelessWidget {
                             text: 'Next',
                             textStyle: mediumTextStyle.copyWith(color: whiteColor, fontSize: 16, fontWeight: FontWeight.bold),
                             gradientColor: blueLinear,
-                            onPressed: () {},
+                            onPressed: () {
+                              navigateTo(context, GoalScreen());
+                            },
                           ),
                         ],
                       ),
