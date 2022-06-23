@@ -10,6 +10,8 @@ class Paths {
   static String goal2Image = 'assets/images/goal2.png';
   static String goal3Image = 'assets/images/goal3.png';
 
+  static String welcomeScreenImage = 'assets/images/welcome_screen.png';
+
   static String arrowRight = 'assets/images/arrow_right.png';
   static String arrowDown = 'assets/images/arrow_down.png';
 

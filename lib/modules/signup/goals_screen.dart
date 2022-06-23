@@ -16,8 +16,8 @@ class GoalItem {
   GoalItem(this.goalImage, this.goalTitle, this.goalSubtitle);
 }
 
-class GoalScreen extends StatelessWidget {
-  GoalScreen({Key? key}) : super(key: key);
+class GoalsScreen extends StatelessWidget {
+  GoalsScreen({Key? key}) : super(key: key);
 
   List<GoalItem> goals = [
     GoalItem(Paths.goal1Image, 'Improve Shape', 'I have a low amount of body fat and need / want to build more muscle'),
@@ -109,6 +109,9 @@ class GoalScreen extends StatelessWidget {
                       text: 'Confirm',
                       textStyle: mediumTextStyle.copyWith(color: whiteColor, fontSize: 16, fontWeight: FontWeight.bold),
                       onPressed: () {
+                        if (signUpCubit.carouselIndex == goals.length) {
+                          signUpCubit.goToLoginScreen(context);
+                        }
                         signUpCubit.animateToNextCarouselItem(carouselController, goals);
                       },
                       gradientColor: blueLinear,
