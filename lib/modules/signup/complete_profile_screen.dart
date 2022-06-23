@@ -85,15 +85,15 @@ class CompleteProfileScreen extends StatelessWidget {
                             ),
                             items: const [
                               DropdownMenuItem(
-                                value: ' items',
+                                value: ' Male',
                                 child: Text(
-                                  'items',
+                                  'Male',
                                 ),
                               ),
                               DropdownMenuItem(
-                                value: ' items2',
+                                value: 'Female',
                                 child: Text(
-                                  'items2',
+                                  'Female',
                                 ),
                               ),
                             ],
@@ -111,7 +111,7 @@ class CompleteProfileScreen extends StatelessWidget {
                                 firstDate: DateTime(1975),
                                 lastDate: DateTime(2100),
                               );
-                              dateOfBirthController.text = newDate!.toString();
+                              dateOfBirthController.text = newDate!.toString().split(' ')[0];
                             },
                             validate: (String? value) {
                               if (value != null) {
